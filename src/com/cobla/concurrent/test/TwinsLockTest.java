@@ -9,7 +9,6 @@ import static java.lang.Thread.sleep;
  * @Author cobla
  * @Date 2018/12/25 0025 20:00
  * @Version 1.0
- * @Description TODO
  */
 public class TwinsLockTest {
 
