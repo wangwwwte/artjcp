@@ -23,6 +23,9 @@ public class TwinsLockTest {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    //当这里只有一个unlock的时候，正常逻辑应该是直接报错，因为代码没有lock却unlock了
+                    //但是实际上没有报错一开始state是2，后来慢慢的变大了...
+                    //坑，还是要实测代码才行
                     lock.unlock();
                     /*lock.lock();
                     try {
