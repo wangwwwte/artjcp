@@ -5,10 +5,10 @@ import java.util.concurrent.locks.Lock;
 import static java.lang.Thread.sleep;
 
 /**
- * @ClassName TwinsLockTest
- * @Author cobla
- * @Date 2018/12/25 0025 20:00
- * @Version 1.0
+ * @classname TwinsLockTest
+ * @author cobla
+ * @date 2018/12/25 0025 20:00
+ * @version 1.0
  */
 public class TwinsLockTest {
 
