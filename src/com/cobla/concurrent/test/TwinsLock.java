@@ -33,6 +33,14 @@ public class TwinsLock implements Lock {
             }
         }
 
+        /***
+         * @Author cobla
+         * @Date 2018/12/25 0025 21:03
+         * @Param [addCount]
+         * @return boolean
+         * @Description 这个方式有bug，因为没有进行资源上限的验证。<br/>
+         * 当多次频繁的调用unlock的时候，state可以超过2，然后如果tryacquiresared的话，那么代码就bug了
+         */
         @Override
         protected boolean tryReleaseShared(int addCount) {
             System.out.println(getState());
