@@ -10,6 +10,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @date 2018/12/26 0026 22:06
  * @description 5-19锁降级的案例，测不明白锁降级能测试些什么，反正能降级，没有报什么奇奇怪怪的错误
  */
+@SuppressWarnings("InfiniteLoopStatement")
 public class ProcessData {
     private volatile boolean update=false;
     public static final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();

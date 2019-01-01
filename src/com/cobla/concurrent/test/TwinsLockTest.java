@@ -15,6 +15,7 @@ public class TwinsLockTest {
     public static void main(String[] args) {
         final Lock lock = new TwinsLock();
         class Worker extends Thread {
+            @SuppressWarnings("InfiniteLoopStatement")
             public void run(){
                 while(true){
                     try {

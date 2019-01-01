@@ -92,7 +92,7 @@ public class FairAndUnfairTest {
          */
         @Override
         public Collection<Thread> getQueuedThreads() {
-            List<Thread> threads = new ArrayList<Thread>(super.getQueuedThreads());
+            List<Thread> threads = new ArrayList<>(super.getQueuedThreads());
             Collections.reverse(threads);
             return threads;
         }

@@ -13,6 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2018/12/31 0031 16:19
  * @description 5-21 ndiction的使用案例，通过一个有界队列
  */
+@SuppressWarnings("unchecked")
 public class BoundedQueue<T> {
     private Object[] items;
     //插入下标，删除下标，数组当前元素个数
@@ -47,6 +48,7 @@ public class BoundedQueue<T> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public T remove() throws InterruptedException {
         lock.lock();
         try {

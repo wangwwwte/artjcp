@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  */
 public class AtomicIntegerFieldUpdaterTest {
     //原子更新器，设置需要更新的对象类和对象的属性
-    private static AtomicIntegerFieldUpdater<User> a = AtomicIntegerFieldUpdater.newUpdater(User.class, "old");
+    private static final AtomicIntegerFieldUpdater<User> a = AtomicIntegerFieldUpdater.newUpdater(User.class, "old");
 
     public static void main(String[] args) {
         //柯南10岁

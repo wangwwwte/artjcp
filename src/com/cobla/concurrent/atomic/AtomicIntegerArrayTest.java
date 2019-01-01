@@ -10,8 +10,8 @@ import java.util.concurrent.atomic.AtomicIntegerArray;
  * @description
  */
 public class AtomicIntegerArrayTest {
-    static int[] value = new int[]{1,2,3};
-    static AtomicIntegerArray a = new AtomicIntegerArray(value);
+    private static int[] value = new int[]{1,2,3};
+    private static AtomicIntegerArray a = new AtomicIntegerArray(value);
 
     public static void main(String[] args) {
         System.out.println(a.getAndSet(1, 6));

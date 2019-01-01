@@ -77,6 +77,7 @@ public class TwinsLock implements Lock {
         sync.tryReleaseShared(1);
     }
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     public Condition newCondition() {
         return null;

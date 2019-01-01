@@ -20,12 +20,12 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * 需要注意的是写线程不一定运行是互斥的，只是操作临界区是互斥的，因此可以看到偶尔写线程出现了同时启动的情况
  */
 public class Cache {
-    static Map<String,Object> map = new HashMap<String, Object>();
+    static Map<String,Object> map = new HashMap<>();
     static ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
     static Lock r = rwl.readLock();
     static Lock w = rwl.writeLock();
     //获取一个key
-    public static final Object get(String key){
+    public static Object get(String key){
         r.lock();
         try {
             return map.get(key);
@@ -35,7 +35,7 @@ public class Cache {
     }
 
     //写入
-    public static final Object put(String key, Object value) {
+    public static Object put(String key, Object value) {
         w.lock();
         try {
             return map.put(key, value);
@@ -45,7 +45,7 @@ public class Cache {
     }
 
     //clear All
-    public static final void clear() {
+    public static void clear() {
         w.lock();
         try {
             map.clear();

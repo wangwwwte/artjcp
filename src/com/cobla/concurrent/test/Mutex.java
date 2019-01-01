@@ -118,7 +118,7 @@ public class Mutex implements Lock {
 
     public static void main(String[] args) {
         final Mutex mutex = new Mutex();
-        List<Thread> threadList = new ArrayList<Thread>(10);
+        List<Thread> threadList = new ArrayList<>(10);
         for (int i = 0; i < 3; i++) {
             threadList.add(new Thread(() ->{
                 while (true) {
